@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+
+first_dictionary = {}
+second = {"car":"malibu", "dream_car": "corevtte"}
+print(second["car"])
+print(second["dream_car"])
+second.update({"dream_car": "bugatti"})
+print(second)
+second["car"] = ["prius", "F350", "SantaFe"]
+
+print(second["car"][1])
+
+#print(second.keys())
+#print(second.values())
+
