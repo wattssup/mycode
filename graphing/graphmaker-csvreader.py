@@ -20,7 +20,7 @@ def parsecsvdata():
         # Parse csv data with csv.reader
         downdata = csv.reader(downtime, delimiter=",")
         for row in downdata:
-            rowdat = (row[0], row [1], row[2], row[3])
+            rowdat = (int(row[0]), int(row [1]), int(row[2]), int(row[3]))
             summary.append(rowdat) # add dict to list
         return summary
 
@@ -30,9 +30,9 @@ def main():
     ## grab our data
     summary = parsecsvdata() # grab our data
     localnetMeans = summary[0] # LAN Data
-    # print(localnetMeans)
+    print(localnetMeans)
     wanMeans = summary[1] # WAN Data
-    # print(wanMeans)
+    print(wanMeans)
 
     ind = np.arange(N) # the xlocations for the groups
     # the width of the bars: can also be the len(x) sequence
